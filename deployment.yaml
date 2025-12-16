@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.21  # Startar med en äldre version
+        image: nginx  # Startar med en äldre version
         ports:
         - containerPort: 80
 ---
