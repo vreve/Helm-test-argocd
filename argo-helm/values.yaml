@@ -1,0 +1,29 @@
+server:
+  enabled: true
+
+  # Standalone mode (INGEN HA)
+  standalone:
+    enabled: true
+
+    config: |
+      ui = true
+
+      listener "tcp" {
+        address     = "0.0.0.0:8200"
+        tls_disable = 1
+      }
+
+      storage "file" {
+        path = "/vault/data"
+      }
+
+  dataStorage:
+    enabled: true
+    size: 1Gi
+    storageClass: local-path   # k3s default
+
+  service:
+    type: ClusterIP
+
+ui:
+  enabled: true
