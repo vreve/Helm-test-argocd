@@ -6,6 +6,7 @@ metadata:
     app: nginx-test
 spec:
   replicas: 1
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: nginx-test
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx  # Startar med en äldre version
+        image: nginx:1.21  # Startar med en äldre version
         ports:
         - containerPort: 80
 ---
