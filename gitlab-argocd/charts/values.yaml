@@ -1,24 +1,31 @@
 global:
   edition: ce
   hosts:
-    domain: gitlab.local
+    domain: "local.test"
   ingress:
-    enabled: false
+    configureCertmanager: false
 
+# Stäng av alla extra subcharts
 certmanager:
-  install: false
+  installCertmanager: false
 
 nginx-ingress:
   enabled: false
 
-prometheus:
-  install: false
-
 gitlab-runner:
   install: false
 
+registry:
+  install: false
+
+minio:
+  install: false
+
 postgresql:
-  install: true
+  install: false
 
 redis:
+  install: false
+
+prometheus:
   install: false
