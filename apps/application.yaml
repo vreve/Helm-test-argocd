@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: 'https://github.com/vreve/Helm-test-argocd.git'
     targetRevision: main
-    path: charts/gitlab          # <-- path från repo-root till chart
+    path: charts/gitlab         # <-- path från repo-root till chart
     helm:
       valueFiles:
-        - ../values.yaml         # <-- relativt charts/gitlab
+        - values.yaml         # <-- relativt charts/gitlab
 
   destination:
     server: 'https://kubernetes.default.svc'
