@@ -6,10 +6,13 @@ global:
     configureCertmanager: false
 
 installCertmanager: true
+
 certmanager:
   installCRDs: true
   nameOverride: certmanager
+
 certmanager-issuer:
+  install: true        # måste finnas
   email: test@example.com
 
 nginx-ingress:
