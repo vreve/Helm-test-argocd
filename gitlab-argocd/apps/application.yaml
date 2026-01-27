@@ -1,20 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitlab-test
+  name: gitlab
   namespace: argocd
 spec:
   project: default
+
   source:
     repoURL: 'https://github.com/vreve/Helm-test-argocd.git'
     targetRevision: main
-    path: charts/gitlab
+    path: charts/gitlab          # <-- path från repo-root till chart
     helm:
       valueFiles:
-        - gitlab-argocd/charts/values.yaml
+        - ../values.yaml         # <-- relativt charts/gitlab
+
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: gitlab
+
   syncPolicy:
     automated:
       prune: true
