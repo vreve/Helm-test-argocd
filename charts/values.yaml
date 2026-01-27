@@ -11,6 +11,9 @@ certmanager:
   installCRDs: true    # installera CRDs
   nameOverride: certmanager
 
+certmanager-issuer:
+  email: email@example.com
+
 nginx-ingress:
   enabled: false
 
