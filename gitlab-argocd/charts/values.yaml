@@ -6,7 +6,7 @@ global:
     enabled: false
 
 certmanager:
-  install: true
+  installCertmanager: true
 
 nginx-ingress:
   enabled: false
