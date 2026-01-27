@@ -7,7 +7,9 @@ global:
 
 # Stäng av alla extra subcharts
 certmanager:
-  installCertmanager: false
+  install: true        # installera cert-manager
+  installCRDs: true    # installera CRDs
+  nameOverride: certmanager
 
 nginx-ingress:
   enabled: false
