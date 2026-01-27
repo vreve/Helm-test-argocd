@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/vreve/Helm-test-argocd.git'
     targetRevision: main
-    path: charts/gitlab
+    path: gitlab-argocd/charts/gitlab
     helm:
       valueFiles:
         - gitlab-argocd/charts/values.yaml
