@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: 'https://github.com/vreve/Helm-test-argocd.git'
     targetRevision: main
-    path: charts/gitlab
+    path: gitlab-argocd/charts/gitlab
     helm:
       valueFiles:
-        - charts/values.yaml
+        - ../values.yaml
 
   destination:
     server: 'https://kubernetes.default.svc'
@@ -22,9 +22,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    retry:
-      limit: 5
-      backoff:
-        duration: 5s
-        factor: 2
-        maxDuration: 3m
