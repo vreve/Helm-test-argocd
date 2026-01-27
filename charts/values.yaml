@@ -5,14 +5,12 @@ global:
   ingress:
     configureCertmanager: false
 
-# Stäng av alla extra subcharts
+installCertmanager: true
 certmanager:
-  install: true        # installera cert-manager
-  installCRDs: true    # installera CRDs
+  installCRDs: true
   nameOverride: certmanager
-
 certmanager-issuer:
-  email: email@example.com
+  email: test@example.com
 
 nginx-ingress:
   enabled: false
